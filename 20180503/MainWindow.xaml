@@ -5,25 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_20180503"
         mc:Ignorable="d"
-        Title="BMI" Height="300" Width="500">
+        Title="BMI" Height="360" Width="500">
     <Grid>
         <StackPanel Margin="20" Width="400" >          
             <Canvas Width="400" Height="50">
+                <TextBlock Foreground="DarkCyan" Width="40" Margin="180 0">Height</TextBlock>
                 <Border x:Name="Height" Canvas.Top="0" Canvas.Left="0" Margin="0 20 20 10" CornerRadius="10" Background="CornflowerBlue">
                     <TextBlock x:Name="HeightNumber" Width="50" TextAlignment="Center" Padding="0 5" Foreground="White">0</TextBlock>
                     </Border>                
             </Canvas>            
             <Slider x:Name="HeightSlider" Minimum="0" Maximum="200" ValueChanged="Slider_ValueChanged"></Slider>
             <Canvas Width="400" Height="50">
+                <TextBlock Width="45" Margin="180 0"  Foreground="Coral">Weight</TextBlock>
                 <Border x:Name="Weight" Canvas.Top="0" Canvas.Left="0" Margin="0 20 20 10" CornerRadius="10" Background="Coral">
                     <TextBlock x:Name="WeightNumber" Canvas.Top="20" Canvas.Left="10" Width="50" TextAlignment="Center" Padding="0 5" Foreground="White" >0</TextBlock>
                 </Border>
             </Canvas>
             <Slider x:Name="WeightSlider" Minimum="0" Maximum="200" ValueChanged="WeightSlider_ValueChanged"></Slider>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock x:Name="BigNumber" FontSize="40" Margin="0 40" >29</TextBlock>
-                <TextBlock x:Name="SmallNumber" FontSize="20" Margin="0 46">.5</TextBlock>
+            <TextBlock Margin="0 20 0 0">Your BMI</TextBlock>
+            <StackPanel Orientation="Horizontal" Height="60" Width="400">
+                <TextBlock x:Name="BigNumber" FontSize="40" Margin="0 10">29</TextBlock>
+                <TextBlock x:Name="SmallNumber" FontSize="20" Margin="0 16">.5</TextBlock>               
             </StackPanel>
+            <TextBlock x:Name="resultText" FontSize="30" Height="35" Margin="0 0 0 0">Text</TextBlock>
         </StackPanel>
     </Grid>
 </Window>

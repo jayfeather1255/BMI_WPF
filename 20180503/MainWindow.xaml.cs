@@ -49,6 +49,31 @@ namespace _20180503
             else
                 SmallNumber.Text = ".0";
 
+            // 控制結果文字
+            resultText.Text= " ";
+            if (BMI < 18.5)
+            {
+                BigNumber.Foreground = Brushes.Red;
+                SmallNumber.Foreground = Brushes.Red;
+                resultText.Foreground = Brushes.Red;
+                resultText.Text = "過輕";
+            }
+
+            else if (BMI >= 18.5 && BMI < 24)
+            {
+                BigNumber.Foreground = Brushes.Green;
+                SmallNumber.Foreground = Brushes.Green;
+                resultText.Foreground = Brushes.Green;
+                resultText.Text = "正常";
+            }
+
+            else
+            {
+                BigNumber.Foreground = Brushes.DarkOrange;
+                SmallNumber.Foreground = Brushes.DarkOrange;
+                resultText.Foreground = Brushes.DarkOrange;
+                resultText.Text = "過重";
+            }
 
         }
 
@@ -75,6 +100,32 @@ namespace _20180503
                 SmallNumber.Text = "." + parts[1];
             else
                 SmallNumber.Text = ".0";
+
+            // 控制結果文字
+            resultText.Text = " ";
+            if (BMI < 18.5)
+            {
+                BigNumber.Foreground = Brushes.Red;
+                SmallNumber.Foreground = Brushes.Red;
+                resultText.Foreground = Brushes.Red;
+                resultText.Text = "過輕";
+            }
+
+            else if (BMI >= 18.5 && BMI < 24)
+            {
+                BigNumber.Foreground = Brushes.Green;
+                SmallNumber.Foreground = Brushes.Green;
+                resultText.Foreground = Brushes.Green;
+                resultText.Text = "正常";
+            }
+
+            else
+            {
+                BigNumber.Foreground = Brushes.DarkOrange;
+                SmallNumber.Foreground = Brushes.DarkOrange;
+                resultText.Foreground = Brushes.DarkOrange;
+                resultText.Text = "過重";
+            }
         }
     }
 }
